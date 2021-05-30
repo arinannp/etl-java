@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: etl-postgres
+    image: postgres:13.2
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=username
+      - POSTGRES_DB=etl_csv_postgres
+    ports: 
+      - 127.0.0.1:5432:5432
